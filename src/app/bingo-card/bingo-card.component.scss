@@ -1,0 +1,42 @@
+.bingo-card {
+    width: 625px; /* Adjust as needed */
+    // height: 480px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    margin-top: 38px;
+  }
+  
+  .bingo-header {
+    display: grid; /* Use grid for header too for equal spacing */
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    padding: 8px;
+    font-weight: bold;
+    text-align: center; /* Center the labels */
+  }
+  
+  .bingo-grid {
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 equal rows */
+    flex-grow: 1; /* Allow the grid to take up remaining vertical space */
+  }
+  
+  .bingo-cell {
+    justify-content: center;
+    align-items: center;
+    font-size: 1em; /* Adjust font size as needed */
+    height: 82px;
+    width: 88px;
+    text-align: center;
+    padding: 5px;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  
+  /* Target the last row cells to remove the bottom border */
+  .bingo-grid > div:nth-last-child(-n + 5) {
+    border-bottom: none;
+  }

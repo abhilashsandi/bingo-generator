@@ -1,0 +1,37 @@
+.bingo-card-container {
+  }
+  .bingo-card {
+    background-image: url("/backround.png");
+    display: block;
+    background-size: 700px;
+    padding-left: 37px;
+    padding-top: 343px;
+    margin-left: 50px;
+    background-repeat: no-repeat;
+    padding-bottom: 100px
+  }
+  
+  @media print {
+    .bingo-card-container {
+      display: block; /* Ensure each card takes full width on print */
+      page-break-after: always;
+      page-break-before: always;
+    }
+  
+    .bingo-card {
+      margin-bottom: 10cm; /* Add spacing between cards on print */
+      page-break-before: always;
+      page-break-after: always; /* Force each card to a new page */
+      background-image: url("/backround.png");
+      -webkit-print-color-adjust: exact; /* For Chrome and Safari */
+      print-color-adjust: exact; /* Standard property */
+    }
+  
+    button {
+      display: none; /* Hide the print button when printing */
+    }
+  
+    h1 {
+      display: none; /* Hide the title when printing */
+    }
+  }

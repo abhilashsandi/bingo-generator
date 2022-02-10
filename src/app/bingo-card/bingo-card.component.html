@@ -1,1 +1,9 @@
-<p>bingo-card works!</p>
+<div class="bingo-card" >
+    <table class="bingo-grid">
+      <tr class="bingo-row" *ngFor="let row of bingoData">
+        <td class="bingo-cell" *ngFor="let item of row">
+          {{ item }}
+        </td>
+        </tr>
+    </table>
+  </div>

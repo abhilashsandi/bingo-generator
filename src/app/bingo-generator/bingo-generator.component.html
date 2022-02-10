@@ -1,0 +1,10 @@
+<h1>Generate Word Bingo Cards</h1>
+<button (click)="printCards()">Print Bingo Cards</button>
+
+<div class="bingo-card-container">
+  <app-bingo-card class="bingo-card"
+    *ngFor="let i of getRange(numberOfCards);"
+    [backgroundImage]="backgroundImageUrl"
+    [words]="getCardWords(i, generateCardWords())"
+  ></app-bingo-card>
+</div>
