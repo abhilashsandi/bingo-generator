@@ -1,6 +1,6 @@
-# BingoGenerator
+# Bingo Generator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+An Angular app that generates and renders printable bingo cards. Built with the Angular CLI (v19.2.10).
 
 ## Development server
 
